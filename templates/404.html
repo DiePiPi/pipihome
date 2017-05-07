@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+ 
+<html>
+<head>
+<title>### 404 Not Found! ###</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body, html {
+	background-color:#373737;
+	height: 100%;
+	font-family: 'Lato', sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+</style>
+<link href="{% static 'css/404.css' %}" type='text/css' rel='stylesheet'>
+<script type="text/javascript" src="{% static 'js/404.js' %}"></script>
+
+</head>
+
+<body>
+	<div class='bg'>
+		<div class='bg_title' id='bg_title'></div>
+		<script>
+			document.getElementById('bg_title').addEventListener("click", lastpage);
+		</script>
+	</div>
+</body>
+</html> 
