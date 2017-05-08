@@ -25,6 +25,7 @@ urlpatterns = [
     url(r'^$', home),
     
     url(r'^apps/', include('apps.urls')),
+    url(r'^reservation-sys/', include('reserve.urls')),
     
     url(r'.*', nothing_here),
 ]

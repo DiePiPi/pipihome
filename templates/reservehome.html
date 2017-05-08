@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+<title>Reservation System Gide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body, html {
+	background-color: #333;
+	width:100%;
+	height:100%;
+	overflow: hidden;
+	}
+</style>
+<link href="{% static 'css/reservehome.css' %}" type='text/css' rel='stylesheet'>
+<script type="text/javascript" src="{% static '' %}"></script>
+</head>
+
+<body>
+	<div class='nav'>
+		<div id='Home' class="nodropdown" >Home</div>
+		<div id='tutorial' class="dropdown" >Tutorial ></i>
+			{% for t in tu %}
+			<div class="dropdown-content" title='{{ t.content }}'>{{ t.title }}</div>
+			{% endfor %}
+		</div>
+		<div id='fix' class="dropdown" >Fix ></i>
+			{% for f in fx %}
+			<div class="dropdown-content" title='{{ f.content }}'>{{ fx.title }}</div>
+			{% endfor %}
+		</div>
+		<div class="nodropdown">About</div>
+	</div>
+	<iframe src='Setting/' class='frame' ></iframe>
+</body>
+</html>
