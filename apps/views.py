@@ -14,3 +14,8 @@ def nothing_here(request):
 	
 def appshome(request):
 	return render(request, 'appshome.html', {'hello': 'Hello!'})
+
+### test area ###
+
+def test(request):
+	return render(request, 'testex.html')

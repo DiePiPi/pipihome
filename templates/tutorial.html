@@ -18,7 +18,12 @@ body, html {
 	<div class='title'>{{ post.title }}</div>
 	{% for step in steps %}
 		<div class='stepimg'><img src="{% static 'media/' %}{{ step.pic }}"></div>
-		<div class='stepconent'><span class='order'>{{ step.steps }}. </span>{{ step.content }}</div>
+		<div class='stepconent'>
+			<span class='order'>{{ step.steps }}. </span>
+			{{ step.content }}
+			<br>
+			<br>
+		</div>
 	{% endfor %}
 </body>
 </html> 

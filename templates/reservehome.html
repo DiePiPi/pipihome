@@ -12,25 +12,36 @@ body, html {
 	overflow: hidden;
 	}
 </style>
+<link rel="stylesheet" href="http://icono-49d6.kxcdn.com/icono.min.css">
 <link href="{% static 'css/reservehome.css' %}" type='text/css' rel='stylesheet'>
-<script type="text/javascript" src="{% static '' %}"></script>
+<script type="text/javascript" src="{% static 'js/reservehome.js' %}"></script>
 </head>
 
 <body>
 	<div class='nav'>
-		<div id='Home' class="nodropdown" >Home</div>
-		<div id='tutorial' class="dropdown" >Tutorial ></i>
+		<div id='Home' class="nodropdown" onclick="home();" >Home</div>
+		<div id='tutorial' class="dropdown" >Tutorial <span class='icono-caretDown'></span></i>
 			{% for t in tu %}
-			<div class="dropdown-content" title='{{ t.content }}'>{{ t.title }}</div>
+			<div class="dropdown-content" onclick="iframeredir('{{ t.title }}');" title='{{ t.content }}'>{{ t.title }}</div>
 			{% endfor %}
 		</div>
-		<div id='fix' class="dropdown" >Fix ></i>
+		<div id='fix' class="dropdown" >Fix <span class='icono-caretDown'></span></i>
 			{% for f in fx %}
-			<div class="dropdown-content" title='{{ f.content }}'>{{ fx.title }}</div>
+			<div class="dropdown-content" onclick="iframeredir('{{ f.title }}');" title='{{ f.content }}'>{{ f.title }}</div>
 			{% endfor %}
 		</div>
 		<div class="nodropdown">About</div>
 	</div>
-	<iframe src='Setting/' class='frame' ></iframe>
+	<iframe id='iframe1' src='Setting/' class='frame' ></iframe>
+	
+	<div id='language_area' class='fixrt' onClick='switch_lan();'>
+	sdfdsfsdf
+	</div>
+	
+	<script>
+		document.getElementById('language_area').innerHTML = lan;
+	</script>
+	
 </body>
+
 </html>
