@@ -20,7 +20,7 @@ body, html {
 		<div class='stepimg'><img src="{% static 'media/' %}{{ step.pic }}"></div>
 		<div class='stepconent'>
 			<span class='order'>{{ step.steps }}. </span>
-			{{ step.content }}
+			{{ step.content|safe }}
 			<br>
 			<br>
 		</div>
